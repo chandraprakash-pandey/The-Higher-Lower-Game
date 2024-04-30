@@ -3,36 +3,35 @@
     padding: 0;
 }
 
-.middle{
-    position: fixed;
-    top: 50%;
-    left: 46.5%;
+.main{
+    height: 100vh;
 }
 
-#vs{
+.vs_content{
     font-family: "Poppins", sans-serif;
-    background-color: white;
-    color: black;
+    background-color: black;
+    color: white;
     padding: 4vh;
     border-radius: 50%;
     font-size: 2rem;
     font-weight: 550;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-
 .game{
-display: flex;
-width: 100vw;
+    display: flex;
+    height: 100%;
 }
 
 .left{
-background-color: red;
-height: 100vh;
-width: 50vw;
+    width: 50%;
+    background-color: red;
 }
 
 .right{
+    width: 50%;
     background-color: blue;
-    height: 100vh;
-    width: 50vw;
 }
