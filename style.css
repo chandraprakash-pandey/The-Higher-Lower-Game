@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: "Poppins", sans-serif;
 }
 
 .vs_content{
@@ -47,15 +48,19 @@
 
 h1{
     font-size: 4rem;
+    color: white;
+    text-shadow: 5px 2px black;
 }
 
 p{
-    font-size: 2rem;
+    font-size: 1rem;
+    color: white;
 }
 
 .marks{
-    font-size: 3rem;
+    font-size: 4rem;
     color: yellow;
+    font-weight: 550;
 }
 
 .right{
