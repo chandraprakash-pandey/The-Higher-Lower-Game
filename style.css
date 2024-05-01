@@ -25,19 +25,44 @@
 
 .left{
     width: 50%;
-    background-color: red;
+    /* background-color: red; */
     background-image: url("Addidas.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-
 }
 
+
 .left1{
-    color: white;
+    /* color: white; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.content{
+    text-align: center;
+}
+
+h1{
+    font-size: 4rem;
+}
+
+p{
+    font-size: 2rem;
+}
+
+.marks{
+    font-size: 3rem;
+    color: yellow;
 }
 
 .right{
     width: 50%;
     background-color: blue;
+    background-image: url("Harry-Potter.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-position: center; */
 }
