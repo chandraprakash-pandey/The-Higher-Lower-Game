@@ -5,7 +5,6 @@
 }
 
 .vs_content{
-    font-family: "Poppins", sans-serif;
     background-color: white;
     color: black;
     padding: 30px;
@@ -26,7 +25,6 @@
 
 .left{
     width: 50%;
-    /* background-color: red; */
     background-image: url("Addidas.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -35,7 +33,6 @@
 
 
 .left1, .right1{
-    /* color: white; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -84,13 +81,28 @@ p{
     font-size: 1rem;
     border: 2px solid white;
     border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 7px;
 }
 
 .click:hover{
     background-color: white;
     color: black;
+    #arrow{
+        color: black;
+    }
 }
 
 .higher{
     margin-bottom: 20px;
+}
+
+.score{
+    position: fixed;
+    right: 40px;
+    bottom: 30px;
+    font-size: 2rem;
+    z-index: 5;
+    color: white;
 }
