@@ -34,7 +34,7 @@
 }
 
 
-.left1{
+.left1, .right1{
     /* color: white; */
     display: flex;
     justify-content: center;
@@ -55,6 +55,7 @@ h1{
 p{
     font-size: 1rem;
     color: white;
+    text-shadow: 0px 2px black;
 }
 
 .marks{
@@ -70,4 +71,26 @@ p{
     background-repeat: no-repeat;
     background-size: cover;
     /* background-position: center; */
+}
+
+.buttons{
+    margin: 30px;
+}
+.click{
+    padding: 20px 40px;
+    width: 30vmin;
+    background-color: transparent;
+    color: yellow;
+    font-size: 1rem;
+    border: 2px solid white;
+    border-radius: 50px;
+}
+
+.click:hover{
+    background-color: white;
+    color: black;
+}
+
+.higher{
+    margin-bottom: 20px;
 }
