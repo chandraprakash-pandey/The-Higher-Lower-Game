@@ -96,6 +96,7 @@ color: yellow;
 
 .click:hover{
     background-color: white;
+
     .arr_content{
         color: black;
     }
@@ -112,4 +113,8 @@ color: yellow;
     font-size: 2rem;
     z-index: 5;
     color: white;
+}
+
+.score_pop{
+    font-size: 4rem;
 }
