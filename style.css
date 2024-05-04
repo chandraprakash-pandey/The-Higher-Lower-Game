@@ -8,6 +8,8 @@
     background-color: white;
     color: black;
     padding: 30px;
+    /* height: 7vmin; */
+    /* width: 7vmin; */
     border-radius: 50%;
     font-size: 2rem;
     font-weight: 550;
@@ -16,6 +18,16 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 15;
+}
+
+.vs_right{
+    background-color: green;
+    color: white;
+}
+
+.vs_wrong{
+    background-color: red;
+    color: white;
 }
 
 .game{
@@ -105,7 +117,6 @@ color: yellow;
     }
 }
 
-
 .score{
     position: fixed;
     right: 40px;
@@ -116,5 +127,5 @@ color: yellow;
 }
 
 .score_pop{
-    font-size: 4rem;
+    font-size: 3rem;
 }
