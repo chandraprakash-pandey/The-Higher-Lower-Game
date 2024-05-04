@@ -18,16 +18,19 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 15;
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 
 .vs_right{
     background-color: green;
     color: white;
+    /* transition: 0.3s; */
 }
 
 .vs_wrong{
     background-color: red;
     color: white;
+    /* transition: 0.3s; */
 }
 
 .game{
@@ -124,8 +127,10 @@ color: yellow;
     font-size: 2rem;
     z-index: 5;
     color: white;
+    transition: 0.3s;
 }
 
 .score_pop{
     font-size: 3rem;
+    /* transition: 0.3s; */
 }
