@@ -20,7 +20,7 @@ function score_pop(){
     setTimeout(function(){
         score_.classList.remove("score_pop");
         vs.classList.remove("vs_right");
-    }, 600)
+    }, 900)
 
 }
 
@@ -28,5 +28,5 @@ higher_click.addEventListener("click", function (){
     vs.classList.add("vs_wrong");
     setTimeout(function(){
     vs.classList.remove("vs_wrong");
-    }, 600)
+    }, 900)
 })

@@ -24,13 +24,11 @@
 .vs_right{
     background-color: green;
     color: white;
-    /* transition: 0.3s; */
 }
 
 .vs_wrong{
     background-color: red;
     color: white;
-    /* transition: 0.3s; */
 }
 
 .game{
@@ -127,10 +125,9 @@ color: yellow;
     font-size: 2rem;
     z-index: 5;
     color: white;
-    transition: 0.3s;
+    transition: 0.5s 0.3s;
 }
 
 .score_pop{
     font-size: 3rem;
-    /* transition: 0.3s; */
 }
