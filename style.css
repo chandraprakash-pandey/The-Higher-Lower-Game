@@ -7,9 +7,10 @@
 .vs_content{
     background-color: white;
     color: black;
+    width: 45px;
+    text-align: center;
+    height: 40px;
     padding: 30px;
-    /* height: 7vmin; */
-    /* width: 7vmin; */
     border-radius: 50%;
     font-size: 2rem;
     font-weight: 550;
