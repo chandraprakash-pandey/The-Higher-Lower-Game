@@ -147,6 +147,11 @@ color: yellow;
 
     .score{
         font-size: 1rem;
+        transition: 0.5s 0.3s;
+    }
+
+    .score_pop{
+        font-size: 1.5rem;
     }
 
     h1{
@@ -168,4 +173,9 @@ color: yellow;
     .left1, .right1{
         height: 50vh;
     }
+
+    .click{
+        width: 40vmin;
+    }
+
 }
