@@ -10,6 +10,9 @@
     color: black;
     width: 45px;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 40px;
     padding: 30px;
     border-radius: 50%;
@@ -150,7 +153,19 @@ color: yellow;
         font-size: 2rem;
     }
 
-    .content{
-        
+    .vs_content{
+        font-size: 1.5rem;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .marks{
+        font-size: 2rem;
+    }
+
+    .left1, .right1{
+        height: 50vh;
     }
 }
