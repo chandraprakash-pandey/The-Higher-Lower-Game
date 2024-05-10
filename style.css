@@ -175,7 +175,8 @@ color: yellow;
     }
 
     .click{
-        width: 40vmin;
+        width: 45vmin;
+        padding: 15px 25px;
     }
 
 }
