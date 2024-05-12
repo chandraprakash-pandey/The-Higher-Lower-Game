@@ -10,9 +10,6 @@
     color: black;
     width: 45px;
     text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     height: 40px;
     padding: 30px;
     border-radius: 50%;
@@ -45,7 +42,7 @@
     width: 50%;
     background-image: url("Addidas.jpg");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% 100%;
     background-position: center;
 }
 
@@ -84,7 +81,7 @@ h1{
     background-color: blue;
     background-image: url("Harry-Potter.webp");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% 100%;
 }
 
 .buttons{

@@ -4,7 +4,6 @@ score.innerHTML = x;
 let vs = document.querySelector(".vs_content");
 let higher_click = document.querySelector(".higher");
 let lower_click = document.querySelector(".lower");
-let random = Math.floor((Math.random()*20));
 let arr_img = [];
 
 lower_click.addEventListener("click", function (){
@@ -34,5 +33,3 @@ higher_click.addEventListener("click", function (){
     vs.innerHTML = "VS"
     }, 900)
 })
-
-console.log(random);
