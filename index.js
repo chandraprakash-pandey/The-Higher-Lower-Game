@@ -4,7 +4,13 @@ score.innerHTML = x;
 let vs = document.querySelector(".vs_content");
 let higher_click = document.querySelector(".higher");
 let lower_click = document.querySelector(".lower");
-let arr_img = [];
+let right = document.querySelector(".right");
+const img_no = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19];
+
+const img = [
+    'Addidas.jpg',
+    'Harry-Potter.webp'
+]
 
 lower_click.addEventListener("click", function (){
     x++;
