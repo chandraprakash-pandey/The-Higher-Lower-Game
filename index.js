@@ -22,7 +22,7 @@ const group = [
     {name: '"American Beauty"', searches: 368000},
     {name: '"Bangkok"', searches: 1000000},
     {name: '"John Cena"', searches: 2240000},
-    {name: '"ruit Ninja"', searches: 1500000},
+    {name: '"fruit Ninja"', searches: 1500000},
     {name: '"Queen Victoria"', searches: 823000},
     {name: '"Nelson Mandela"', searches: 1000000},
     {name: '"Instagram"', searches: 151000000},
