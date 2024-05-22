@@ -79,7 +79,6 @@ h1{
 .right{
     width: 50%;
     background-color: blue;
-    background-image: url("Harry-Potter.webp");
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
