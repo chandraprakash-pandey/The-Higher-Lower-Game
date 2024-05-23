@@ -36,12 +36,15 @@ let group_dub = group;
 score.innerHTML = x;
 
 console.log(random_num);
-console.log(group_dub[random_num].name);
+console.log(group_dub.length);
 
 right_img.style.backgroundImage = `url("${group_dub[random_num].images}")`;
 right_img.querySelector("h1").innerHTML = group_dub[random_num].name;
 
 left_img.style.backgroundImage = `url("${group_dub[random_num].images}")`;
+left_img.querySelector("h1").innerHTML = group_dub[random_num].name;
+left_img.querySelector(".marks").innerHTML = group_dub[random_num].searches;
+
 
 
 lower_click.addEventListener("click", function (){
