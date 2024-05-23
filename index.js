@@ -31,13 +31,18 @@ const group = [
     {name: '"Alcohol"', searches: 673000, images: 'Images/Alcohol.webp'},
 ];
 
+let group_dub = group;
+
 score.innerHTML = x;
 
 console.log(random_num);
-console.log(group[random_num].name);
+console.log(group_dub[random_num].name);
 
-right_img.style.backgroundImage = `url("${group[random_num].images}")`;
-right_img.querySelector("h1").innerHTML = group[random_num].name;
+right_img.style.backgroundImage = `url("${group_dub[random_num].images}")`;
+right_img.querySelector("h1").innerHTML = group_dub[random_num].name;
+
+left_img.style.backgroundImage = `url("${group_dub[random_num].images}")`;
+
 
 lower_click.addEventListener("click", function (){
     x++;
