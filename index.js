@@ -5,8 +5,6 @@ let higher_click = document.querySelector(".higher");
 let lower_click = document.querySelector(".lower");
 let right_img = document.querySelector(".right");
 let left_img = document.querySelector(".left");
-let random_num1 = Math.floor(Math.random()*21);
-let random_num2 = Math.floor(Math.random()*21);
 let count = 0;
 
 const group = [
@@ -47,16 +45,19 @@ score.innerHTML = x;
 // left_img.querySelector("h1").innerHTML = group_dub[random_num2].name;
 // left_img.querySelector(".marks").innerHTML = group_dub[random_num2].searches;
 
-for(var i = 0; i<=20; i++){
+let random_num1 = Math.floor(Math.random()*group_dub.length);
     left_img.style.backgroundImage = `url("${group_dub[random_num1].images}")`;
     left_img.querySelector("h1").innerHTML = group_dub[random_num1].name;
     left_img.querySelector(".marks").innerHTML = group_dub[random_num1].searches;
     console.log(random_num1)
-    console.log(random_num2)
     group.splice(random_num1, 1);
+    let random_num2 = Math.floor(Math.random()*group_dub.length);
+    console.log(random_num2)
     console.log(group_dub);
     right_img.style.backgroundImage = `url("${group_dub[random_num2].images}")`;
     right_img.querySelector("h1").innerHTML = group_dub[random_num2].name;
+
+for(var i = 0; i<=20; i++){
     if(score === count){
         continue;
     }
