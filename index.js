@@ -6,6 +6,7 @@ let lower_click = document.querySelector(".lower");
 let right_img = document.querySelector(".right");
 let left_img = document.querySelector(".left");
 let random_num = Math.floor(Math.random()*21)
+let count = 0;
 
 const group = [
     {name: '"Outlook"', searches: 68000000, images: 'Images/Outlook.webp'},
@@ -45,7 +46,11 @@ left_img.style.backgroundImage = `url("${group_dub[random_num].images}")`;
 left_img.querySelector("h1").innerHTML = group_dub[random_num].name;
 left_img.querySelector(".marks").innerHTML = group_dub[random_num].searches;
 
-
+for(var i = 0; i<=20; i++){
+    if(score === count){
+        
+    }
+}
 
 lower_click.addEventListener("click", function (){
     x++;
