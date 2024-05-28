@@ -5,7 +5,8 @@ let higher_click = document.querySelector(".higher");
 let lower_click = document.querySelector(".lower");
 let right_img = document.querySelector(".right");
 let left_img = document.querySelector(".left");
-let random_num = Math.floor(Math.random()*21)
+let random_num1 = Math.floor(Math.random()*21);
+let random_num2 = Math.floor(Math.random()*21);
 let count = 0;
 
 const group = [
@@ -36,19 +37,31 @@ let group_dub = group;
 
 score.innerHTML = x;
 
-console.log(random_num);
-console.log(group_dub.length);
+// console.log(random_num1);
+// console.log(group_dub.length);
 
-right_img.style.backgroundImage = `url("${group_dub[random_num].images}")`;
-right_img.querySelector("h1").innerHTML = group_dub[random_num].name;
+// right_img.style.backgroundImage = `url("${group_dub[random_num1].images}")`;
+// right_img.querySelector("h1").innerHTML = group_dub[random_num1].name;
 
-left_img.style.backgroundImage = `url("${group_dub[random_num].images}")`;
-left_img.querySelector("h1").innerHTML = group_dub[random_num].name;
-left_img.querySelector(".marks").innerHTML = group_dub[random_num].searches;
+// left_img.style.backgroundImage = `url("${group_dub[random_num2].images}")`;
+// left_img.querySelector("h1").innerHTML = group_dub[random_num2].name;
+// left_img.querySelector(".marks").innerHTML = group_dub[random_num2].searches;
 
 for(var i = 0; i<=20; i++){
+    left_img.style.backgroundImage = `url("${group_dub[random_num1].images}")`;
+    left_img.querySelector("h1").innerHTML = group_dub[random_num1].name;
+    left_img.querySelector(".marks").innerHTML = group_dub[random_num1].searches;
+    console.log(random_num1)
+    console.log(random_num2)
+    group.splice(random_num1, 1);
+    console.log(group_dub);
+    right_img.style.backgroundImage = `url("${group_dub[random_num2].images}")`;
+    right_img.querySelector("h1").innerHTML = group_dub[random_num2].name;
     if(score === count){
-        
+        continue;
+    }
+    else{
+        break;
     }
 }
 
