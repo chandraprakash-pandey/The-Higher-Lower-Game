@@ -35,16 +35,6 @@ let group_dub = group;
 
 score.innerHTML = x;
 
-// console.log(random_num1);
-// console.log(group_dub.length);
-
-// right_img.style.backgroundImage = `url("${group_dub[random_num1].images}")`;
-// right_img.querySelector("h1").innerHTML = group_dub[random_num1].name;
-
-// left_img.style.backgroundImage = `url("${group_dub[random_num2].images}")`;
-// left_img.querySelector("h1").innerHTML = group_dub[random_num2].name;
-// left_img.querySelector(".marks").innerHTML = group_dub[random_num2].searches;
-
 let random_num1 = Math.floor(Math.random()*group_dub.length);
 left_img.style.backgroundImage = `url("${group_dub[random_num1].images}")`;
 left_img.querySelector("h1").innerHTML = group_dub[random_num1].name;
@@ -82,6 +72,16 @@ lower_click.addEventListener("click", function (){
     score_pop();
 })
 
+higher_click.addEventListener("click", function (){
+    vs.classList.add("vs_wrong");
+    vs.innerHTML = "X"
+    setTimeout(function(){
+    vs.classList.remove("vs_wrong");
+    vs.innerHTML = "VS"
+    }, 900)
+})
+
+
 function score_pop(){
     let score_ = document.querySelector(".score");
     score_.classList.add("score_pop");
@@ -94,12 +94,3 @@ function score_pop(){
     }, 900)
 
 }
-
-higher_click.addEventListener("click", function (){
-    vs.classList.add("vs_wrong");
-    vs.innerHTML = "X"
-    setTimeout(function(){
-    vs.classList.remove("vs_wrong");
-    vs.innerHTML = "VS"
-    }, 900)
-})
