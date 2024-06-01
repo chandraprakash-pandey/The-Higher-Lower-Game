@@ -31,54 +31,67 @@ const group = [
     {name: '"Alcohol"', searches: 673000, images: 'Images/Alcohol.webp'},
 ];
 
-let group_dub = group;
+let group_dub;
 
 score.innerHTML = x;
+let random_num1, random_num2;
+let value_img_1, value_img_2;
 
-let random_num1 = Math.floor(Math.random()*group_dub.length);
-left_img.style.backgroundImage = `url("${group_dub[random_num1].images}")`;
-left_img.querySelector("h1").innerHTML = group_dub[random_num1].name;
-left_img.querySelector(".marks").innerHTML = group_dub[random_num1].searches;
-console.log(random_num1)
-let value_img_1 = group[random_num1].searches;
-console.log(value_img_1);
-group.splice(random_num1, 1);
-let random_num2 = Math.floor(Math.random()*group_dub.length);
-console.log(random_num2)
-console.log(group_dub);
-right_img.style.backgroundImage = `url("${group_dub[random_num2].images}")`;
-right_img.querySelector("h1").innerHTML = group_dub[random_num2].name;
-let value_img_2 = group[random_num2].searches;
-
-for(var i = 0; i<=20; i++){
-    if(x === count){
-        if(value_img_1 >= value_img_2){
-            
-            continue;
-        }
-        else if (value_img_1 <= value_img_2){
-            continue;
-        }
-    }
-
-    else{
-        break;
-    }
+function left_to_right(){
+    random_num1 = Math.floor(Math.random()*group.length);
+    random_num2 = Math.floor(Math.random()*group.length);
+    right_img.style.backgroundImage = `url("${group[random_num1].images}")`;
+    right_img.querySelector("h1").innerHTML = group[random_num1].name;
+    group.splice(random_num2, 1);
+    left_img.style.backgroundImage = `url("${group[random_num2].images}")`;
+    left_img.querySelector("h1").innerHTML = group[random_num2].name;
+    left_img.querySelector(".marks").innerHTML = group[random_num2].searches;
+    value_img_1 = group[random_num2].searches;
+    value_img_2 = group[random_num1].searches;
 }
 
+left_to_right();
+
 lower_click.addEventListener("click", function (){
-    x++;
-    score.innerHTML = x;
-    score_pop();
+    if(value_img_1>=value_img_2){
+        left_to_right();
+        x++;
+        score.innerHTML = x;
+        score_pop();
+        console.log(random_num2);
+        left_img.style.backgroundImage = `url("${group[random_num2].images}")`;
+        left_img.querySelector("h1").innerHTML = group[random_num2].name;
+        left_img.querySelector(".marks").innerHTML = group[random_num2].searches;
+
+    }
+    else {
+        vs.classList.add("vs_wrong");
+        vs.innerHTML = "X"
+        setTimeout(function(){
+        vs.classList.remove("vs_wrong");
+        vs.innerHTML = "VS"
+        }, 900)
+    }
 })
 
 higher_click.addEventListener("click", function (){
-    vs.classList.add("vs_wrong");
-    vs.innerHTML = "X"
-    setTimeout(function(){
-    vs.classList.remove("vs_wrong");
-    vs.innerHTML = "VS"
-    }, 900)
+    if(value_img_1<=value_img_2){
+        left_to_right();
+        x++;
+        score.innerHTML = x;
+        score_pop();
+        left_img.style.backgroundImage = `url("${group[random_num2].images}")`;
+        left_img.querySelector("h1").innerHTML = group[random_num2].name;
+        left_img.querySelector(".marks").innerHTML = group[random_num2].searches;
+    }
+    else {
+        vs.classList.add("vs_wrong");
+        vs.innerHTML = "X"
+        setTimeout(function(){
+        vs.classList.remove("vs_wrong");
+        vs.innerHTML = "VS"
+        }, 900)
+    }
 })
 
 
