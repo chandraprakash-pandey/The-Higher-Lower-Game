@@ -43,6 +43,7 @@ left_img.style.backgroundImage = `url("${group[random_num1].images}")`;
 left_img.querySelector("h1").innerHTML = group[random_num1].name;
 left_img.querySelector(".marks").innerHTML = group[random_num1].searches;
 group.splice(random_num1, 1);
+value_img_1 = group[random_num1].searches;
 
 
 function left_to_right(){
@@ -50,9 +51,7 @@ function left_to_right(){
     right_img.style.backgroundImage = `url("${group[random_num2].images}")`;
     right_img.querySelector("h1").innerHTML = group[random_num2].name;
     group_dub = group[random_num2];
-    value_img_1 = group[random_num1].searches;
     value_img_2 = group[random_num2].searches;
-    console.log(random_num2);
 }
 
 left_to_right();
@@ -62,7 +61,8 @@ lower_click.addEventListener("click", function (){
         left_img.style.backgroundImage = `url("${group_dub.images}")`;
         left_img.querySelector("h1").innerHTML = group_dub.name;
         left_img.querySelector(".marks").innerHTML = group_dub.searches;
-        group.slice(random_num2,1);
+        value_img_1 = group_dub.searches;
+        group.splice(random_num2,1);
         x++;
         score.innerHTML = x;
         score_pop();
@@ -84,7 +84,8 @@ higher_click.addEventListener("click", function (){
         left_img.style.backgroundImage = `url("${group_dub.images}")`;
         left_img.querySelector("h1").innerHTML = group_dub.name;
         left_img.querySelector(".marks").innerHTML = group_dub.searches;
-        group.slice(random_num2,1);
+        value_img_1 = group_dub.searches;
+        group.splice(random_num2,1);
         x++;
         score.innerHTML = x;
         score_pop();
