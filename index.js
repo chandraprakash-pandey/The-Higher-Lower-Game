@@ -72,7 +72,6 @@ lower_click.addEventListener("click", function (){
         value_img_1 = group_dub.searches;
         group_dublicate.splice(random_num2,1);
         x++;
-        y++;
         score.innerHTML = x;
         score_pop();
         left_to_right();
@@ -99,7 +98,6 @@ higher_click.addEventListener("click", function (){
         value_img_1 = group_dub.searches;
         group_dublicate.splice(random_num2,1);
         x++;
-        y++;
         score.innerHTML = x;
         score_pop();
         left_to_right();
@@ -126,7 +124,7 @@ function score_pop(){
     let score_ = document.querySelector(".score");
     score_.classList.add("score_pop");
     vs.classList.add("vs_right");
-    vs.innerHTML = "🗸"
+    vs.innerHTML = "🗸";
     setTimeout(function(){
         score_.classList.remove("score_pop");
         vs.classList.remove("vs_right");
