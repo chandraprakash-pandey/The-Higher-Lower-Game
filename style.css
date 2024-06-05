@@ -196,6 +196,7 @@ color: yellow;
 .main{
     display: block;
     z-index: 1;
+    display: none;
 }
 
 .gameover{
@@ -225,6 +226,12 @@ h2{
     background-color: green;
     border: 2px solid white;
     border-radius: 50px;
-    font-size: 15
-    px;
+    font-size: 20px;
+}
+
+.playagain:hover{
+    color: green;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid ;
+
 }
