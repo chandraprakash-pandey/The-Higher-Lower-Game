@@ -135,16 +135,7 @@ function score_pop(){
     
 }
 
-
-// if(x>=y){
-//     y = x;
-// }
-
-
 Play_again.addEventListener("click", function (){
     group_dublicate = group;
     main.style.display = "block";
 })
-
-// score1.innerHTML = x;
-// Highscore.innerHTML = Math.max(x,y);

@@ -183,6 +183,7 @@ color: yellow;
     .click{
         width: 45vmin;
         padding: 15px 25px;
+
     }
 
     .score{
@@ -193,7 +194,8 @@ color: yellow;
 }
 
 .main{
-    /* display: none; */
+    display: block;
+    z-index: 1;
 }
 
 .gameover{
