@@ -6,6 +6,12 @@ let lower_click = document.querySelector(".lower");
 let right_img = document.querySelector(".right");
 let left_img = document.querySelector(".left");
 
+let Play_again = document.querySelector(".playagain");
+let main = document.querySelector(".main");
+let score1 = document.querySelector(".num1");
+let Highscore = document.querySelector(".highscore");
+let y = 0;
+
 let group = [
     {name: '"Outlook"', searches: 68000000, images: 'Images/Outlook.webp'},
     {name: '"News"', searches: 16000000, images: 'Images/News.webp'},
@@ -66,6 +72,7 @@ lower_click.addEventListener("click", function (){
         value_img_1 = group_dub.searches;
         group_dublicate.splice(random_num2,1);
         x++;
+        y++;
         score.innerHTML = x;
         score_pop();
         left_to_right();
@@ -75,8 +82,11 @@ lower_click.addEventListener("click", function (){
         vs.classList.add("vs_wrong");
         vs.innerHTML = "X"
         setTimeout(function(){
-        vs.classList.remove("vs_wrong");
-        vs.innerHTML = "VS"
+            vs.classList.remove("vs_wrong");
+            main.style.display = "none";
+            score1.innerHTML = x;
+            Highscore.innerHTML = Math.max(x,y);
+            x = 0;
         }, 900)
     }
 })
@@ -89,6 +99,7 @@ higher_click.addEventListener("click", function (){
         value_img_1 = group_dub.searches;
         group_dublicate.splice(random_num2,1);
         x++;
+        y++;
         score.innerHTML = x;
         score_pop();
         left_to_right();
@@ -98,8 +109,14 @@ higher_click.addEventListener("click", function (){
         vs.classList.add("vs_wrong");
         vs.innerHTML = "X"
         setTimeout(function(){
-        vs.classList.remove("vs_wrong");
-        vs.innerHTML = "VS"
+            vs.classList.remove("vs_wrong");
+            main.style.display = "none";
+            if(x>=y){
+                y = x;
+            }
+            score1.innerHTML = x;
+            Highscore.innerHTML = Math.max(x,y);
+            x = 0;
         }, 900)
     }
 })
@@ -115,6 +132,19 @@ function score_pop(){
         vs.classList.remove("vs_right");
         vs.innerHTML = "VS";
     }, 900)
-
+    
 }
 
+
+// if(x>=y){
+//     y = x;
+// }
+
+
+Play_again.addEventListener("click", function (){
+    group_dublicate = group;
+    main.style.display = "block";
+})
+
+// score1.innerHTML = x;
+// Highscore.innerHTML = Math.max(x,y);
