@@ -127,7 +127,7 @@ function score_pop(){
     score_.classList.add("score_pop");
     vs.classList.add("vs_right");
     vswala.style.display = "none"
-    check.style.display = "block";
+    check.style.display = "inline";
     setTimeout(function(){
         score_.classList.remove("score_pop");
         vs.classList.remove("vs_right");

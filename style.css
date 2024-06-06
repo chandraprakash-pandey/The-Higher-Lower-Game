@@ -21,11 +21,15 @@
     transform: translate(-50%, -50%);
     z-index: 25;
     transition: 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .check{
     display: none;
-    /* z-index: 100; */
+    /* text-align: center; */
+    z-index: 100;
 }
 
 .vs{
