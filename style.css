@@ -200,6 +200,7 @@ color: yellow;
     }
 
     .score{
+        position: absolute;
         right: 40px;
         top: 30px;
     }
@@ -207,6 +208,7 @@ color: yellow;
 }
 
 .main{
+    overflow: hidden;
     display: block;
     z-index: 1;
 }
@@ -217,9 +219,10 @@ color: yellow;
     height: 100vh;
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
 .centerit{

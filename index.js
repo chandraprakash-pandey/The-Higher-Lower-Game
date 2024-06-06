@@ -1,3 +1,4 @@
+let y = 0;
 let x = 0;
 let score = document.querySelector('.num');
 let vs = document.querySelector(".vs_content");
@@ -10,9 +11,14 @@ let Play_again = document.querySelector(".playagain");
 let main = document.querySelector(".main");
 let score1 = document.querySelector(".num1");
 let Highscore = document.querySelector(".highscore");
-let y = 0;
 let check = document.querySelector(".check");
-let vswala = document.querySelector(".vs")
+let vswala = document.querySelector(".vs");
+let gameover = document.querySelector(".gameover");
+let group_dublicate;
+let group_dub;
+
+let random_num1, random_num2;
+let value_img_1, value_img_2;
 
 let group = [
     {name: '"Outlook"', searches: 68000000, images: 'Images/Outlook.webp'},
@@ -38,23 +44,21 @@ let group = [
     {name: '"Alcohol"', searches: 673000, images: 'Images/Alcohol.webp'},
 ];
 
-let group_dublicate = group;
+group_dublicate = JSON.parse(JSON.stringify(group));
 
-let group_dub;
+vswala.innerHTML = "VS";
 
 score.innerHTML = x;
 
-let random_num1, random_num2;
-let value_img_1, value_img_2;
-
+function leftwala(){
 random_num1 = Math.floor(Math.random()*group_dublicate.length);
-
+// group_dublicate = group;
 left_img.style.backgroundImage = `url("${group_dublicate[random_num1].images}")`;
 left_img.querySelector("h1").innerHTML = group_dublicate[random_num1].name;
 left_img.querySelector(".marks").innerHTML = group_dublicate[random_num1].searches;
 group_dublicate.splice(random_num1, 1);
 value_img_1 = group_dublicate[random_num1].searches;
-
+}
 
 function left_to_right(){
     random_num2 = Math.floor(Math.random()*group_dublicate.length);
@@ -63,7 +67,7 @@ function left_to_right(){
     group_dub = group_dublicate[random_num2];
     value_img_2 = group_dublicate[random_num2].searches;
 }
-
+leftwala();
 left_to_right();
 
 lower_click.addEventListener("click", function (){
@@ -77,18 +81,22 @@ lower_click.addEventListener("click", function (){
         score.innerHTML = x;
         score_pop();
         left_to_right();
-        console.log(group_dublicate);
     }
     else {
         vs.classList.add("vs_wrong");
-        vs.innerHTML = "X"
+        vswala.innerHTML = "X";
+        group_dublicate = group;
         setTimeout(function(){
             vs.classList.remove("vs_wrong");
             main.style.display = "none";
+            gameover.style.display = "flex";
+            if(x>=y){
+                y = x;
+            }
             score1.innerHTML = x;
             Highscore.innerHTML = Math.max(x,y);
-            x = 0;
         }, 900)
+        console.log(group_dublicate);
     }
 })
 
@@ -104,20 +112,22 @@ higher_click.addEventListener("click", function (){
         score_pop();
         left_to_right();
         console.log(group_dublicate);
+
     }
     else {
         vs.classList.add("vs_wrong");
-        vs.innerHTML = "X"
+        vswala.innerHTML = "X";
+        group_dublicate = group;
         setTimeout(function(){
             vs.classList.remove("vs_wrong");
             main.style.display = "none";
+            gameover.style.display = "flex";
             if(x>=y){
                 y = x;
             }
             score1.innerHTML = x;
             Highscore.innerHTML = Math.max(x,y);
-            x = 0;
-        }, 900)
+            }, 900)
     }
 })
 
@@ -138,10 +148,12 @@ function score_pop(){
 }
 
 Play_again.addEventListener("click", function (){
-    group_dublicate = group;
-    main.style.display = "block";
-    left_to_right();
+    document.querySelector(".main").style.display = "block";
+    group_dublicate = JSON.parse(JSON.stringify(group));
+    console.log(group);
     x = 0;
-    vs.innerHTML = "VS";
     score.innerHTML = x;
+    leftwala();
+    left_to_right();
+    vswala.innerHTML = "VS";
 })
