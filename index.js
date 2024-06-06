@@ -136,4 +136,8 @@ function score_pop(){
 Play_again.addEventListener("click", function (){
     group_dublicate = group;
     main.style.display = "block";
+    left_to_right();
+    x = 0;
+    vs.innerHTML = "VS";
+    score.innerHTML = x;
 })
