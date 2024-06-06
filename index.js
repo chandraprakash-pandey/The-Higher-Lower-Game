@@ -96,7 +96,6 @@ lower_click.addEventListener("click", function (){
             score1.innerHTML = x;
             Highscore.innerHTML = Math.max(x,y);
         }, 900)
-        console.log(group_dublicate);
     }
 })
 
@@ -111,7 +110,6 @@ higher_click.addEventListener("click", function (){
         score.innerHTML = x;
         score_pop();
         left_to_right();
-        console.log(group_dublicate);
 
     }
     else {
@@ -150,7 +148,6 @@ function score_pop(){
 Play_again.addEventListener("click", function (){
     document.querySelector(".main").style.display = "block";
     group_dublicate = JSON.parse(JSON.stringify(group));
-    console.log(group);
     x = 0;
     score.innerHTML = x;
     leftwala();
