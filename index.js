@@ -11,6 +11,8 @@ let main = document.querySelector(".main");
 let score1 = document.querySelector(".num1");
 let Highscore = document.querySelector(".highscore");
 let y = 0;
+let check = document.querySelector(".check");
+let vswala = document.querySelector(".vs")
 
 let group = [
     {name: '"Outlook"', searches: 68000000, images: 'Images/Outlook.webp'},
@@ -124,11 +126,13 @@ function score_pop(){
     let score_ = document.querySelector(".score");
     score_.classList.add("score_pop");
     vs.classList.add("vs_right");
-    vs.innerHTML = "🗸";
+    vswala.style.display = "none"
+    check.style.display = "block";
     setTimeout(function(){
         score_.classList.remove("score_pop");
         vs.classList.remove("vs_right");
-        vs.innerHTML = "VS";
+        vswala.style.display = "block";
+        check.style.display = "none";
     }, 900)
     
 }
