@@ -162,7 +162,7 @@ color: yellow;
     }
     .left , .right{
         width: 100%;
-        height: auto;
+        max-height: 50vh;
     }
 
     .score{
