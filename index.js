@@ -55,7 +55,7 @@ random_num1 = Math.floor(Math.random()*group_dublicate.length);
 // group_dublicate = group;
 left_img.style.backgroundImage = `url("${group_dublicate[random_num1].images}")`;
 left_img.querySelector("h1").innerHTML = group_dublicate[random_num1].name;
-left_img.querySelector(".marks").innerHTML = group_dublicate[random_num1].searches;
+left_img.querySelector(".marks").innerHTML = group_dublicate[random_num1].searches.toLocaleString();
 group_dublicate.splice(random_num1, 1);
 value_img_1 = group_dublicate[random_num1].searches;
 }
@@ -74,7 +74,7 @@ lower_click.addEventListener("click", function (){
     if(value_img_1>=value_img_2){
         left_img.style.backgroundImage = `url("${group_dub.images}")`;
         left_img.querySelector("h1").innerHTML = group_dub.name;
-        left_img.querySelector(".marks").innerHTML = group_dub.searches;
+        left_img.querySelector(".marks").innerHTML = group_dub.searches.toLocaleString();
         value_img_1 = group_dub.searches;
         group_dublicate.splice(random_num2,1);
         x++;
@@ -103,7 +103,7 @@ higher_click.addEventListener("click", function (){
     if(value_img_1<=value_img_2){
         left_img.style.backgroundImage = `url("${group_dub.images}")`;
         left_img.querySelector("h1").innerHTML = group_dub.name;
-        left_img.querySelector(".marks").innerHTML = group_dub.searches;
+        left_img.querySelector(".marks").innerHTML = group_dub.searches.toLocaleString();
         value_img_1 = group_dub.searches;
         group_dublicate.splice(random_num2,1);
         x++;
